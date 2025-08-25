@@ -3,41 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Weiterleitung …</title>
+  <title>Weiterleitung · FlaschIdle (WIP)</title>
   <style>
+    :root { color-scheme: light dark; }
     html,body {height:100%;margin:0;background:#0e1726;color:#e5e7eb;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    .wrap {min-height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;text-align:center}
+    .wrap {min-height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;text-align:center;padding:24px}
+    .title {font-size:32px;font-weight:900;letter-spacing:.3px}
+    .sub {opacity:.9;font-size:16px}
     .hint {opacity:.7;font-size:14px}
+    .btn {
+      display:inline-block; padding:12px 18px; border-radius:12px;
+      background:#ffffff; color:#0e1726; font-weight:800; text-decoration:none;
+      box-shadow:0 6px 20px rgba(0,0,0,.25);
+    }
+    .btn:active { transform:translateY(1px); }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div>Öffne App …</div>
-    <div class="hint">Falls sich nichts tut, wirst du gleich weitergeleitet.</div>
+    <div class="title">FlaschIdle (WIP)</div>
+    <div class="sub">Danke fürs Registrieren bei FlaschIdle :3</div>
+    <div class="hint">Wir leiten dich jetzt zurück in die App.</div>
+
+    <p><a id="openLink" class="btn" href="#">App öffnen</a></p>
+
+    <div class="hint">Falls sich nichts tut, tippe auf „App öffnen“.</div>
   </div>
 
   <script>
-    // TODO: Anpassen
+    // App-Callback-Scheme (muss zu deiner Flutter-Konfiguration passen)
     var appScheme = 'io.supabase.flutter://callback';
-    var playStoreUrl = 'https://play.google.com/store/apps/details?id=com.yystudios.flaschidle';
-    var appStoreUrl = ''; // optional: App Store URL, falls du iOS hast
 
     // Supabase hängt Query (?...) und ggf. Hash (#...) an → 1:1 an App-Scheme weiterreichen
     var target = appScheme + window.location.search + window.location.hash;
 
-    // Sofort versuchen, die App zu öffnen
-    window.location.replace(target);
+    // Button-Href setzen (manuelles Öffnen)
+    var link = document.getElementById('openLink');
+    link.setAttribute('href', target);
 
-    // Fallback nach 1600ms (App nicht installiert / Browser blockt)
-    setTimeout(function () {
-      // iOS vs. Android rudimentär unterscheiden
-      var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      if (isiOS && appStoreUrl) {
-        window.location.href = appStoreUrl;
-      } else {
-        window.location.href = playStoreUrl;
-      }
-    }, 1600);
+    // Sofort versuchen, die App zu öffnen (kein Store-Fallback)
+    // Manche Browser blocken dies – dann bleibt der Button als manueller Weg.
+    try {
+      window.location.replace(target);
+    } catch (_) {
+      // ignorieren – der Benutzer kann den Button verwenden
+    }
   </script>
+
+  <noscript>
+    <div style="position:fixed;left:0;right:0;bottom:0;padding:12px;background:#111827;color:#e5e7eb;text-align:center;">
+      JavaScript ist deaktiviert. Bitte aktiviere JavaScript und lade die Seite neu.
+    </div>
+  </noscript>
 </body>
 </html>
