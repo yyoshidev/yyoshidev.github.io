@@ -12,7 +12,6 @@
     a:hover { text-decoration: underline; }
     .wrap { margin: 0 auto; }
     .muted { opacity: .75; font-size: .95em; }
-    code { background: rgba(127,127,127,.15); padding: .06em .35em; border-radius: .25em; }
   </style>
 </head>
 <body>
@@ -27,47 +26,44 @@
     </p>
 
     <h2>2. Geltungsbereich</h2>
-    <p>Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten bei der Nutzung der App <strong>FlaschIdle</strong> (WIP) sowie der zugehörigen Dienste (z. B. Anmeldung/Authentifizierung).</p>
+    <p>Diese Erklärung informiert über die Verarbeitung von Daten bei Nutzung der App <strong>FlaschIdle</strong> (WIP) und der zugehörigen Authentifizierung.</p>
 
-    <h2>3. Verarbeitete Daten & Zwecke</h2>
+    <h2>3. Verarbeitete personenbezogene Daten</h2>
+    <p><strong>Wir erheben und verarbeiten personenbezogene Daten ausschließlich in Form deiner E-Mail-Adresse.</strong></p>
     <ul>
-      <li><strong>Konto-/Profildaten:</strong> E-Mail, Nutzer-ID, optional Anzeigename/Handle. <em>Zweck:</em> Konto anlegen, einloggen, Spielstände & Freundesfunktionen.</li>
-      <li><strong>Authentifizierungsdaten:</strong> Anmeldedaten (E-Mail/Passwort) oder OAuth-Daten von Google (z. B. E-Mail, Name falls freigegeben). <em>Zweck:</em> Anmeldung/Session-Verwaltung.</li>
-      <li><strong>Nutzungs-/Spiel-Daten:</strong> Inventar, Fortschritt (XP/Level), In-App-Aktionen (z. B. Kessel, Geschenke). <em>Zweck:</em> Spiellogik, Fairness, Support.</li>
-      <li><strong>Technische Daten:</strong> Zeitpunkt, IP-Adresse (gekürzt/temporär durch Infrastruktur), Geräteinfos (standardmäßig minimal). <em>Zweck:</em> Betrieb, Sicherheit, Missbrauchserkennung.</li>
+      <li><strong>E-Mail-Adresse</strong> – zur Kontoerstellung, Anmeldung (Passwort-Login oder „Mit Google anmelden“) und für notwendige Systemmails (z. B. Bestätigungsmail, Passwort zurücksetzen).</li>
+    </ul>
+    <p>Bei Google-Login erhalten wir von Google lediglich die zur Anmeldung erforderliche E-Mail-Adresse (weitere Profilfelder werden nicht genutzt).</p>
+
+    <h3>App-Daten ohne Personenbezug</h3>
+    <p>Spielstände (z. B. XP/Level, Inventar, Kessel-Fortschritt, Freundesstatus) werden appintern einer zufälligen Nutzerkennung zugeordnet. Diese Daten enthalten <strong>keine</strong> Klarnamen, Adressen o. Ä. und dienen ausschließlich der Spielfunktion.</p>
+
+    <h2>4. Zwecke & Rechtsgrundlagen</h2>
+    <ul>
+      <li><strong>Zwecke:</strong> Registrierung/Anmeldung, Sitzungsverwaltung, Bereitstellung der Spielfunktionen, notwendige Systemkommunikation.</li>
+      <li><strong>Rechtsgrundlagen (DSGVO):</strong> Art. 6 Abs. 1 lit. b (Vertrag/Vertragsanbahnung) und Art. 6 Abs. 1 lit. f (berechtigtes Interesse am sicheren Betrieb). Bei Google-Login zusätzlich ggf. Art. 6 Abs. 1 lit. a (Einwilligung für Google-Scopes).</li>
     </ul>
 
-    <h2>4. Rechtsgrundlagen</h2>
+    <h2>5. Empfänger / Auftragsverarbeiter</h2>
     <ul>
-      <li>Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Vertragsanbahnung) – Bereitstellung der App-Funktionen.</li>
-      <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) – Betrieb/Sicherheit der Dienste.</li>
-      <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) – soweit explizit erteilt (z. B. Google Sign-In Scopes).</li>
+      <li><strong>Supabase</strong> (Hosting, Datenbank, Auth). Region gemäß Projekteinstellung (z. B. EU). DPA vorhanden. Infos: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>Google</strong> (OAuth), nur wenn „Mit Google anmelden“ genutzt wird. Infos: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
     </ul>
 
-    <h2>5. Empfänger & Auftragsverarbeiter</h2>
-    <ul>
-      <li><strong>Supabase</strong> (Hosting, Datenbank, Auth). Projektregion gemäß Konfiguration (z. B. EU). Auftragsverarbeitungsvertrag (DPA) mit Supabase.<br>
-        Info: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>
-      </li>
-      <li><strong>Google (OAuth)</strong> – wenn du „Mit Google anmelden“ nutzt.<br>
-        Info: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
-      </li>
-    </ul>
-
-    <h2>6. Drittlandübermittlung</h2>
-    <p>Abhängig von der gewählten Supabase-Region und den eingesetzten Diensten kann eine Übermittlung in Drittländer stattfinden. Es werden geeignete Schutzmaßnahmen (z. B. EU-Standardvertragsklauseln) eingesetzt, soweit erforderlich.</p>
+    <h2>6. Internationale Datenübermittlung</h2>
+    <p>Je nach Infrastruktur/Region kann eine Datenübermittlung in Drittländer erfolgen. Soweit erforderlich, kommen geeignete Garantien (z. B. EU-Standardvertragsklauseln) zum Einsatz.</p>
 
     <h2>7. Speicherdauer</h2>
-    <p>Wir speichern personenbezogene Daten solange, wie es für die Zwecke (Betrieb der App) erforderlich ist bzw. gesetzliche Aufbewahrungsfristen bestehen. Kontodaten löschen wir nach Konto-Löschung, sofern keine gesetzlichen Pflichten entgegenstehen.</p>
+    <p>Deine E-Mail-Adresse speichern wir bis zur <strong>Konto-Löschung</strong>. App-Daten ohne Personenbezug werden solange vorgehalten, wie dies für den Spielbetrieb erforderlich ist. Gesetzliche Aufbewahrungsfristen bleiben unberührt.</p>
 
     <h2>8. Deine Rechte</h2>
-    <p>Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch (Art. 15–21 DSGVO). Zudem besteht ein Beschwerderecht bei einer Aufsichtsbehörde.</p>
+    <p>Du hast Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit sowie Widerspruch (Art. 15–21 DSGVO). Zudem besteht ein Beschwerderecht bei einer Aufsichtsbehörde.</p>
 
     <h2>9. Sicherheit</h2>
-    <p>Wir treffen technische und organisatorische Maßnahmen, um Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen (z. B. TLS, rollenbasierte Zugriffssteuerung).</p>
+    <p>Wir schützen Daten durch geeignete technische und organisatorische Maßnahmen (z. B. TLS-Verschlüsselung, rollenbasierte Zugriffe).</p>
 
     <h2>10. Cookies/Tracking</h2>
-    <p>Die App verwendet standardmäßig keine Third-Party-Tracking-SDKs. Falls sich dies ändert, passen wir diese Erklärung an.</p>
+    <p>Die App verwendet keine Third-Party-Tracking-SDKs und keine Werbe-ID. Sollte sich dies ändern, wird diese Erklärung aktualisiert.</p>
 
     <h2>11. Änderungen</h2>
     <p>Wir können diese Erklärung anpassen, wenn sich Funktionen, Rechtslage oder Dienstleister ändern. Die jeweils aktuelle Fassung ist unter dieser URL verfügbar.</p>
